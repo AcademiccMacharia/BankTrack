@@ -108,12 +108,12 @@ class BankAccount {
   
 
 
-   const bankContent = document.querySelector('.container');
+const bankContent = document.querySelector('.container');
 
 const displaySavings = () => {
  
-const bankAccount = document.createElement('div');
-bankAccount.classList.add('bankAccount');
+const savingAccount = document.createElement('div');
+savingAccount.classList.add('bankAccount');
 
 const heading = document.createElement('h3')
 heading.innerText = "This is the savings account"
@@ -134,8 +134,31 @@ const interestRate = document.createElement('h5');
 interestRate.classList.add('interestRate');
 interestRate.innerText = `Interest rate: ${savingsAccount.calculateInterest()}`;
 
-bankAccount.append(heading, accountNumber, accountHolder, balance, interestRate);
-bankContent.append(bankAccount);
+savingAccount.append(heading, accountNumber, accountHolder, balance, interestRate);
+bankContent.append(savingAccount);
 }
 
 displaySavings()
+
+
+const displayChecking = () => {
+   
+    const checksAccount = document.createElement('div');
+    checksAccount.classList.add('checkAccount');
+    
+    const heading = document.createElement('h3')
+    heading.innerText = "This is the checking account"
+    
+    const accountNumber = document.createElement('h5');
+    accountNumber.classList.add('accountNumber');
+    accountNumber.innerText = `Account number: ${checkingAccount.accountNumber}`;
+    
+    const accountHolder = document.createElement('h5');
+    accountHolder.classList.add('accountHolder');
+    accountHolder.innerText = `Account holder: ${checkingAccount.accountHolder}`;
+    
+    checksAccount.append(heading, accountNumber, accountHolder);
+    bankContent.append(checksAccount);
+    }
+    displayChecking()
+
