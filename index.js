@@ -90,7 +90,7 @@ class BankAccount {
   }
   
 
-  const savingsAccount = new SavingsAccount("SA001", "John Doe", 1000, 0.05);
+  const savingsAccount = new SavingsAccount("SA001", "Benson Macharia", 1000, 0.05);
   console.log(`Account number: ${savingsAccount.accountNumber}`);
   console.log(`Account holder: ${savingsAccount.accountHolder}`);
   console.log(`Balance: ${savingsAccount.balance}`);
@@ -98,7 +98,7 @@ class BankAccount {
   savingsAccount.withdraw(200);
   savingsAccount.calculateInterest();
   
-  const checkingAccount = new CheckingAccount("CA001", "Jane Smith", 500, 1000);
+  const checkingAccount = new CheckingAccount("CA001", "Simon Peter", 500, 1000);
   console.log(`Account number: ${checkingAccount.accountNumber}`);
   console.log(`Account holder: ${checkingAccount.accountHolder}`);
   console.log(`Balance: ${checkingAccount.balance}`);
@@ -108,7 +108,6 @@ class BankAccount {
   
 
 
-//   const balance = prompt("Enter the b")
    const bankContent = document.querySelector('.container');
 
 const displaySavings = () => {
@@ -116,26 +115,26 @@ const displaySavings = () => {
 const bankAccount = document.createElement('div');
 bankAccount.classList.add('bankAccount');
 
-const heading = document.createElement('p')
+const heading = document.createElement('h3')
 heading.innerText = "This is the savings account"
 
-const accountNumber = document.createElement('h3');
+const accountNumber = document.createElement('h5');
 accountNumber.classList.add('accountNumber');
 accountNumber.innerText = `Account number: ${savingsAccount.accountNumber}`;
 
-const accountHolder = document.createElement('h3');
+const accountHolder = document.createElement('h5');
 accountHolder.classList.add('accountHolder');
 accountHolder.innerText = `Account holder: ${savingsAccount.accountHolder}`;
 
-const balance = document.createElement('p');
+const balance = document.createElement('h5');
 balance.classList.add('balance');
 balance.innerText = `Balance: ${savingsAccount.balance}`;
 
-const interestRate = document.createElement('h3');
+const interestRate = document.createElement('h5');
 interestRate.classList.add('interestRate');
 interestRate.innerText = `Interest rate: ${savingsAccount.calculateInterest()}`;
 
-bankAccount.append(accountNumber, accountHolder, balance, interestRate);
+bankAccount.append(heading, accountNumber, accountHolder, balance, interestRate);
 bankContent.append(bankAccount);
 }
 
